@@ -12,22 +12,24 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
+    <mat-toolbar 
+    [ngClass]="{fsTitle: (isHandset$ | async)}"
+    color="primary">
       <button
         type="button"
         aria-label="Toggle sidenav"
         mat-icon-button
         (click)="drawer.toggle()"
         *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        <mat-icon class="icon-large" aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span>website title</span>
       <span class="spacer"></span>
       <span
       [ngClass]="{hidden: (isHandset$ | async)}">
-      <button mat-button color="accent">link1</button>
-      <button mat-button color="accent">link2</button>
-      <button mat-button color="accent">link3</button>
+      <button mat-button >link1</button>
+      <button mat-button >link2</button>
+      <button mat-button >link3</button>
     </span>
     </mat-toolbar>
     <ng-content></ng-content>

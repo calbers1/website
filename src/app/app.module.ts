@@ -12,11 +12,23 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { DoodadsComponent } from './doodads/doodads.component';
+import { MainBodyComponent } from './main-body/main-body.component';
+import {MatGridListModule} from '@angular/material/grid-list'; 
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { MatCardModule} from '@angular/material/card';
+import {MatRadioModule} from '@angular/material/radio';
+import {FormsModule} from '@angular/forms'
+import {MatProgressBarModule} from '@angular/material/progress-bar'; 
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainNavComponent,
+    MainNavComponent, 
+    MainBodyComponent,
+    DoodadsComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,11 +36,17 @@ import { MatListModule } from '@angular/material/list';
     BrowserAnimationsModule,
     MatSliderModule,
     LayoutModule,
+    MatProgressBarModule,
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    MatGridListModule,
+    MatProgressSpinnerModule,
+    MatCardModule,
+    MatRadioModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

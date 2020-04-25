@@ -1,0 +1,77 @@
+<mat-grid-list cols="4" rowHeight="100px">
+    <mat-grid-tile
+        *ngFor="let tile of tiles"
+        [colspan]="tile.cols"
+        [rowspan]="tile.rows"
+        [style.background]="tile.color">
+      {{tile.text}}
+    </mat-grid-tile>
+  </mat-grid-list>
+  
+  <mat-card>
+    <mat-card-content>
+       <h2 class="example-h2">Progress spinner configuration</h2>
+  
+      <section class="example-section">
+        <label class="example-margin">Color:</label>
+        <mat-radio-group [(ngModel)]="color">
+          <mat-radio-button class="example-margin" value="accent">
+            Accent
+          </mat-radio-button>
+          <mat-radio-button class="example-margin" value="warn">
+            Warn
+          </mat-radio-button>
+        </mat-radio-group>
+      </section>
+  
+      <section class="example-section" *ngIf="mode === 'determinate'">
+        <label class="example-margin">Progress:</label>
+        <mat-slider class="example-margin" [(ngModel)]="value"></mat-slider>
+      </section>
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-content>
+      <h2 class="example-h2">Result</h2>
+
+      <mat-progress-spinner
+          class="example-margin"
+          [color]="color"
+          mode="determinate"
+          [value]="value">
+      </mat-progress-spinner>
+      <mat-progress-spinner
+      class="example-margin"
+      [color]="color"
+      mode="indeterminate">
+  </mat-progress-spinner>
+
+  <mat-progress-bar
+  [color]="color"
+  mode="indeterminate">
+  </mat-progress-bar>
+  <h2>indeterminate</h2>
+
+  <mat-progress-bar
+  [color]="color"
+  mode="determinate"
+  [value]="value">
+  </mat-progress-bar>
+  <h2>determinate</h2>
+
+  <mat-progress-bar
+  [color]="color"
+  [value]="value"
+  mode="buffer">
+  </mat-progress-bar>
+  <h2>buffer</h2>
+
+  <mat-progress-bar
+  [color]="color"
+  mode="query">
+  </mat-progress-bar>
+  <h2>query</h2>
+
+    </mat-card-content>
+  </mat-card>
+  

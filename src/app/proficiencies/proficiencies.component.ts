@@ -13,11 +13,11 @@ export interface Tile {
 }
 
 @Component({
-  selector: 'app-doodads',
-  templateUrl: './doodads.component.html',
-  styleUrls: ['./doodads.component.scss']
+  selector: 'app-proficiencies',
+  templateUrl: './proficiencies.component.html',
+  styleUrls: ['./proficiencies.component.scss']
 })
-export class DoodadsComponent implements OnInit {
+export class ProficienciesComponent implements OnInit {
 
   tiles: Tile[] = [
     {text: 'One', cols: 3, rows: 1, color: 'lightblue'},
@@ -40,6 +40,7 @@ constructor(private breakpointObserver: BreakpointObserver) {}
 
 
   ngOnInit(): void {
+    window.scrollTo(0, 0)
   }
 
 }

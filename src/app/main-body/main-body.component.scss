@@ -1,8 +1,15 @@
 div{
     width: 94%;
-    height: 99%;
+    height: 96%;
     margin: auto;
     margin-top: 1%;
+    margin-bottom: 3%;
+    line-height: 2rem;
     //box-shadow: 1px 1px 1rem rgb(27, 27, 27);
     //background-color: rgba(0, 0, 0, 0.2);
+}
+
+mat-divider{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }

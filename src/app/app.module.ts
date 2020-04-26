@@ -12,14 +12,17 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { DoodadsComponent } from './doodads/doodads.component';
+import { ProficienciesComponent } from './proficiencies/proficiencies.component';
 import { MainBodyComponent } from './main-body/main-body.component';
 import {MatGridListModule} from '@angular/material/grid-list'; 
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { MatCardModule} from '@angular/material/card';
 import {MatRadioModule} from '@angular/material/radio';
 import {FormsModule} from '@angular/forms'
-import {MatProgressBarModule} from '@angular/material/progress-bar'; 
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { ExperienceComponent } from './experience/experience.component';
+import { ReviewsComponent } from './reviews/reviews.component';
+import { CopyrightComponent } from './copyright/copyright.component'; 
 
 
 
@@ -28,7 +31,10 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     AppComponent,
     MainNavComponent, 
     MainBodyComponent,
-    DoodadsComponent,
+    ProficienciesComponent,
+    ExperienceComponent,
+    ReviewsComponent,
+    CopyrightComponent,
   ],
   imports: [
     BrowserModule,

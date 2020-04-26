@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {ThemePalette} from '@angular/material/core';
 import {ProgressSpinnerMode} from '@angular/material/progress-spinner';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Observable } from 'rxjs';
+import { map, shareReplay } from 'rxjs/operators';
 
 export interface Tile {
   color: string;
@@ -23,11 +26,18 @@ export class DoodadsComponent implements OnInit {
     {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
   ];
 
-  color: ThemePalette = 'warn';
+  color: ThemePalette = 'accent';
   mode: ProgressSpinnerMode = 'determinate';
   value = 50;
 
-  constructor() { }
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+  .pipe(
+    map(result => result.matches),
+    shareReplay()
+  );
+
+constructor(private breakpointObserver: BreakpointObserver) {}
+
 
   ngOnInit(): void {
   }

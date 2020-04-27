@@ -1,13 +1,4 @@
-<!-- <mat-grid-list cols="4" rowHeight="100px">
-    <mat-grid-tile
-        *ngFor="let tile of tiles"
-        [colspan]="tile.cols"
-        [rowspan]="tile.rows"
-        [style.background]="tile.color">
-      {{tile.text}}
-    </mat-grid-tile>
-  </mat-grid-list> -->
-  <span id="programming"></span>
+
   <h1>Programming Proficiency</h1>
   <div class="languageSection">
     <h2>Desktop:</h2>
@@ -16,40 +7,34 @@
     <mat-card-content>
       <mat-progress-bar
       [color]="color"
-      mode="buffer"
+      mode="determinate"
       value=90>
     </mat-progress-bar>
     </mat-card-content>
-  </mat-card>
 
-  <mat-card>
     <mat-card-title>Java</mat-card-title>
     <mat-card-content>
       <mat-progress-bar
       [color]="color"
-      mode="buffer"
+      mode="determinate"
       value=75>
     </mat-progress-bar>
     </mat-card-content>
-  </mat-card>
 
-  <mat-card>
     <mat-card-title>C#</mat-card-title>
     <mat-card-content>
       <mat-progress-bar
       [color]="color"
-      mode="buffer"
+      mode="determinate"
       value=75>
     </mat-progress-bar>
     </mat-card-content>
-  </mat-card>
 
-  <mat-card>
     <mat-card-title>Python</mat-card-title>
     <mat-card-content>
       <mat-progress-bar
       [color]="color"
-      mode="buffer"
+      mode="determinate"
       value=65>
     </mat-progress-bar>
     </mat-card-content>
@@ -60,125 +45,43 @@
     <h2>Web:</h2>
     <mat-card>
 
-    <mat-card-content>
-
-      <!--If Mobile-->
-      <mat-grid-list cols="1"  gutterSize="1rem" *ngIf="isHandset$ | async; else elseBlock">
-        <mat-grid-tile>    
+    <mat-card-content>   
           <mat-card-title>JavaScript</mat-card-title>
           <mat-card-content>
-            <mat-progress-spinner
+            <mat-progress-bar
               [color]="color"
               mode="determinate"
               value=90>
-            </mat-progress-spinner>
+            </mat-progress-bar>
           </mat-card-content>
 
-      </mat-grid-tile>
-
-      <mat-grid-tile>    
-          
           
           <mat-card-title>CSS</mat-card-title>
           <mat-card-content>
-            <mat-progress-spinner
+            <mat-progress-bar
               [color]="color"
               mode="determinate"
               value=65>
-            </mat-progress-spinner>
+            </mat-progress-bar>
           </mat-card-content>
-        
-      </mat-grid-tile>
 
-      <mat-grid-tile>    
-         
           <mat-card-title>HTML</mat-card-title>
           <mat-card-content>
-            <mat-progress-spinner
+            <mat-progress-bar
               [color]="color"
               mode="determinate"
               value=80>
-            </mat-progress-spinner>
+            </mat-progress-bar>
           </mat-card-content>
         
-      </mat-grid-tile>
-
-      <mat-grid-tile>    
-          
-         
           <mat-card-title>PHP</mat-card-title>
           <mat-card-content>
-            <mat-progress-spinner
+            <mat-progress-bar
               [color]="color"
               mode="determinate"
               value=70>
-            </mat-progress-spinner>
+            </mat-progress-bar>
           </mat-card-content>
-      
-      </mat-grid-tile>
-
-      </mat-grid-list>
-
-      <!--If Desktop-->
-      <ng-template #elseBlock>
-        <mat-grid-list cols="4"  gutterSize="1rem">
-          <mat-grid-tile>    
-            <mat-card-title>JavaScript</mat-card-title>
-            <mat-card-content>
-              <mat-progress-spinner
-                [color]="color"
-                mode="determinate"
-                value=90>
-              </mat-progress-spinner>
-            </mat-card-content>
-          
-  
-        </mat-grid-tile>
-  
-        <mat-grid-tile>    
-            
-            
-            <mat-card-title>CSS</mat-card-title>
-            <mat-card-content>
-              <mat-progress-spinner
-                [color]="color"
-                mode="determinate"
-                value=65>
-              </mat-progress-spinner>
-            </mat-card-content>
-          
-        </mat-grid-tile>
-  
-        <mat-grid-tile>    
-           
-            <mat-card-title>HTML</mat-card-title>
-            <mat-card-content>
-              <mat-progress-spinner
-                [color]="color"
-                mode="determinate"
-                value=80>
-              </mat-progress-spinner>
-            </mat-card-content>
-          
-        </mat-grid-tile>
-  
-        <mat-grid-tile>    
-            
-           
-            <mat-card-title>PHP</mat-card-title>
-            <mat-card-content>
-              <mat-progress-spinner
-                [color]="color"
-                mode="determinate"
-                value=70>
-              </mat-progress-spinner>
-            </mat-card-content>
-        
-        </mat-grid-tile>
-  
-        </mat-grid-list>
-      </ng-template>
-
     </mat-card-content>
   </mat-card>
   </div>
@@ -190,40 +93,34 @@
     <mat-card-content>
       <mat-progress-bar
       [color]="color"
-      mode="buffer"
+      mode="determinate"
       value=65>
     </mat-progress-bar>
     </mat-card-content>
-  </mat-card>
 
-  <mat-card>
     <mat-card-title>Angular</mat-card-title>
     <mat-card-content>
       <mat-progress-bar
       [color]="color"
-      mode="buffer"
+      mode="determinate"
       value=85>
     </mat-progress-bar>
     </mat-card-content>
-  </mat-card>
 
-  <mat-card>
     <mat-card-title>Material</mat-card-title>
     <mat-card-content>
       <mat-progress-bar
       [color]="color"
-      mode="buffer"
+      mode="determinate"
       value=65>
     </mat-progress-bar>
     </mat-card-content>
-  </mat-card>
 
-  <mat-card id="experience">
-    <mat-card-title>Bootstrap</mat-card-title>
+    <mat-card-title id="experience">Bootstrap</mat-card-title>
     <mat-card-content>
       <mat-progress-bar
       [color]="color"
-      mode="buffer"
+      mode="determinate"
       value=75>
     </mat-progress-bar>
     </mat-card-content>

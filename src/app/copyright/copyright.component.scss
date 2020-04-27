@@ -3,11 +3,10 @@ mat-divider{
     margin-bottom: 1rem;
 }
 
-mat-card{
-    width:auto;
-    position: static;
-    bottom: 0px;
-    margin-bottom: 2rem;
+div{
+    display: flex;
+    justify-content: center;
+
 }
 
 .copyright{

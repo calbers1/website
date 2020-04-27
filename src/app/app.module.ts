@@ -22,7 +22,8 @@ import {FormsModule} from '@angular/forms'
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { ExperienceComponent } from './experience/experience.component';
 import { ReviewsComponent } from './reviews/reviews.component';
-import { CopyrightComponent } from './copyright/copyright.component'; 
+import { CopyrightComponent } from './copyright/copyright.component';
+import { AboutMeComponent } from './about-me/about-me.component'; 
 
 
 
@@ -35,6 +36,7 @@ import { CopyrightComponent } from './copyright/copyright.component';
     ExperienceComponent,
     ReviewsComponent,
     CopyrightComponent,
+    AboutMeComponent,
   ],
   imports: [
     BrowserModule,

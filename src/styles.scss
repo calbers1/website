@@ -30,3 +30,15 @@ $website-theme: mat-dark-theme($website-primary, $website-accent, $website-warn)
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.anchor {
+  position: relative;
+  top: -4rem;
+}
+
+hr{
+height: 2px;
+      width: 100%;
+      border-width: 0;
+      color: whitesmoke;
+      background-color: whitesmoke;
+}

@@ -14,7 +14,7 @@
 // hue. Available color palettes: https://material.io/design/color/
 $website-primary: mat-palette($mat-blue, A400);
 $website-accent: mat-palette($mat-yellow, A600);
-$website-warn: mat-palette($mat-deep-orange, A500);
+$website-warn: mat-palette($mat-deep-orange, A500, A200, A800);
 
 // Create the theme object (a Sass map containing all of the palettes).
 $website-theme: mat-light-theme($website-primary, $website-accent, $website-warn);
@@ -50,4 +50,8 @@ height: 2px;
       border-width: 0;
       color: whitesmoke;
       background-color: whitesmoke;
+}
+
+.spacer{
+  flex: 1 1 auto;
 }

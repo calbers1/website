@@ -1,3 +1,14 @@
+$warn: #ff9800;
+$accent: #69f0ae;
+
+.nav-title{
+  color: $accent
+}
+
+.project-link{
+  color: $warn
+}
+
 .sidenav-container {
   height: 100%;
 }
@@ -31,4 +42,8 @@
 
 .fsTitle{
   padding-left: 0px;
+}
+
+.menu-item{
+  color: #69f0ae
 }

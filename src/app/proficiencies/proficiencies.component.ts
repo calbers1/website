@@ -20,8 +20,6 @@ export interface Tile {
 export class ProficienciesComponent implements OnInit {
   color: ThemePalette = 'warn';
   color2: ThemePalette = 'accent';
-  mode: ProgressSpinnerMode = 'determinate';
-  value = 50;
 
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)

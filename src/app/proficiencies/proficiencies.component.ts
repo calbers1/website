@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ThemePalette } from '@angular/material/core';
-import { ProgressSpinnerMode } from '@angular/material/progress-spinner';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
@@ -18,9 +17,6 @@ export interface Tile {
   styleUrls: ['./proficiencies.component.scss'],
 })
 export class ProficienciesComponent implements OnInit {
-  color: ThemePalette = 'warn';
-  color2: ThemePalette = 'accent';
-
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)
     .pipe(

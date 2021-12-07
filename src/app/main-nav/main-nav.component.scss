@@ -1,12 +1,7 @@
-$warn: #ff9800;
-$accent: #69f0ae;
 
-.nav-title{
-  color: $accent
-}
-
-.project-link{
-  color: $warn
+.dark-slider{
+  padding-left: 8%;
+  font-size: 1.2em;
 }
 
 .sidenav-container {
@@ -42,8 +37,4 @@ $accent: #69f0ae;
 
 .fsTitle{
   padding-left: 0px;
-}
-
-.menu-item{
-  color: #69f0ae
 }

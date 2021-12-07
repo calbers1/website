@@ -14,23 +14,22 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { ProficienciesComponent } from './proficiencies/proficiencies.component';
 import { MainBodyComponent } from './main-body/main-body.component';
-import {MatGridListModule} from '@angular/material/grid-list'; 
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import { MatCardModule} from '@angular/material/card';
-import {MatRadioModule} from '@angular/material/radio';
-import {FormsModule} from '@angular/forms'
-import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatCardModule } from '@angular/material/card';
+import { MatRadioModule } from '@angular/material/radio';
+import { FormsModule } from '@angular/forms';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { ExperienceComponent } from './experience/experience.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { CopyrightComponent } from './copyright/copyright.component';
-import { AboutMeComponent } from './about-me/about-me.component'; 
-
-
+import { AboutMeComponent } from './about-me/about-me.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainNavComponent, 
+    MainNavComponent,
     MainBodyComponent,
     ProficienciesComponent,
     ExperienceComponent,
@@ -55,8 +54,9 @@ import { AboutMeComponent } from './about-me/about-me.component';
     MatCardModule,
     MatRadioModule,
     FormsModule,
+    MatSlideToggleModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

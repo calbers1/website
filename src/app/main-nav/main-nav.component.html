@@ -1,4 +1,7 @@
-<mat-sidenav-container class="sidenav-container">
+<mat-sidenav-container
+  class="sidenav-container mat-app-background"
+  [ngClass]="{ 'dark-mode': isDarkTheme }"
+>
   <mat-sidenav
     #drawer
     class="sidenav"
@@ -10,6 +13,15 @@
   >
     <mat-toolbar class="nav-title">Menu</mat-toolbar>
     <mat-nav-list>
+      <mat-slide-toggle
+        [(ngModel)]="isDarkTheme"
+        (change)="storeTheme()"
+        color="primary"
+        labelPosition="before"
+        class="dark-slider"
+      >
+        Dark Theme
+      </mat-slide-toggle>
       <a mat-list-item class="menu-item" href="#programming">Programming</a>
       <a mat-list-item class="menu-item" href="#experience">Experience</a>
       <a mat-list-item class="menu-item" href="#reviews">Reviews</a>
@@ -19,6 +31,7 @@
         href="https://calbers1.github.io/my-expenses"
         target="_blank"
         rel="noopener noreferrer"
+        color="warn"
         >Expenses Project</a
       >
       <a
@@ -27,6 +40,7 @@
         href="https://calbers1.github.io/course-goals"
         target="_blank"
         rel="noopener noreferrer"
+        color="primary"
         >Course Goals(List) App</a
       >
     </mat-nav-list>
@@ -43,22 +57,33 @@
         <mat-icon
           class="icon-large"
           aria-label="Side nav toggle icon"
-          color="accent"
+          color="primary"
           >menu</mat-icon
         >
       </button>
       <h2 class="nav-title">Connor Albers</h2>
       <span class="spacer"></span>
       <span [ngClass]="{ hidden: (isHandset$ | async) }">
-        <a mat-button color="accent" href="#programming">Programming</a>
-        <a mat-button color="accent" href="#experience">Experience</a>
-        <a mat-button color="accent" href="#reviews">Reviews</a>
+        <button
+          mat-icon-button
+          [(ngModel)]="isDarkTheme"
+          ngDefaultControl
+          (click)="changeTheme()"
+          labelPosition="before"
+          color="primary"
+        >
+          <mat-icon>brightness_medium</mat-icon>
+        </button>
+        <a mat-button href="#programming">Programming</a>
+        <a mat-button href="#experience">Experience</a>
+        <a mat-button href="#reviews">Reviews</a>
         <a
           mat-button
           class="project-link"
           href="https://calbers1.github.io/my-expenses"
           target="_blank"
           rel="noopener noreferrer"
+          color="primary"
           >Expenses Project</a
         >
         <a
@@ -67,6 +92,7 @@
           href="https://calbers1.github.io/course-goals"
           target="_blank"
           rel="noopener noreferrer"
+          color="primary"
           >Course Goals(List App)</a
         >
       </span>

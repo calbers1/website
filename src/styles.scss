@@ -55,3 +55,7 @@ height: 2px;
 .spacer{
   flex: 1 1 auto;
 }
+
+mat-sidenav-container, mat-toolbar{
+  transition: 0.5s;
+}

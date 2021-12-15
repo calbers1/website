@@ -44,57 +44,59 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar [ngClass]="{ fsTitle: (isHandset$ | async) }">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async"
-      >
-        <mat-icon
-          class="icon-large"
-          aria-label="Side nav toggle icon"
-          color="primary"
-          >menu</mat-icon
-        >
-      </button>
-      <h2 class="nav-title">Connor Albers</h2>
-      <span class="spacer"></span>
-      <span [ngClass]="{ hidden: (isHandset$ | async) }">
+    <span id="navigation">
+      <mat-toolbar [ngClass]="{ fsTitle: (isHandset$ | async) }">
         <button
+          type="button"
+          aria-label="Toggle sidenav"
           mat-icon-button
-          [(ngModel)]="isDarkTheme"
-          ngDefaultControl
-          (click)="changeTheme()"
-          labelPosition="before"
-          color="primary"
+          (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async"
         >
-          <mat-icon>brightness_medium</mat-icon>
+          <mat-icon
+            class="icon-large"
+            aria-label="Side nav toggle icon"
+            color="primary"
+            >menu</mat-icon
+          >
         </button>
-        <a mat-button href="#programming">Programming</a>
-        <a mat-button href="#experience">Experience</a>
-        <a mat-button href="#reviews">Reviews</a>
-        <a
-          mat-button
-          class="project-link"
-          href="https://calbers1.github.io/my-expenses"
-          target="_blank"
-          rel="noopener noreferrer"
-          color="primary"
-          >Expenses Project</a
-        >
-        <a
-          mat-button
-          class="project-link"
-          href="https://calbers1.github.io/colors"
-          target="_blank"
-          rel="noopener noreferrer"
-          color="primary"
-          >Colors</a
-        >
-      </span>
-    </mat-toolbar>
+        <h2 class="nav-title">Connor Albers</h2>
+        <span class="spacer"></span>
+        <span [ngClass]="{ hidden: (isHandset$ | async) }">
+          <button
+            mat-icon-button
+            [(ngModel)]="isDarkTheme"
+            ngDefaultControl
+            (click)="changeTheme()"
+            labelPosition="before"
+            color="primary"
+          >
+            <mat-icon>brightness_medium</mat-icon>
+          </button>
+          <a mat-button href="#programming">Programming</a>
+          <a mat-button href="#experience">Experience</a>
+          <a mat-button href="#reviews">Reviews</a>
+          <a
+            mat-button
+            class="project-link"
+            href="https://calbers1.github.io/my-expenses"
+            target="_blank"
+            rel="noopener noreferrer"
+            color="primary"
+            >Expenses Project</a
+          >
+          <a
+            mat-button
+            class="project-link"
+            href="https://calbers1.github.io/colors"
+            target="_blank"
+            rel="noopener noreferrer"
+            color="primary"
+            >Colors</a
+          >
+        </span>
+      </mat-toolbar>
+    </span>
     <ng-content></ng-content>
     <ng-content></ng-content>
   </mat-sidenav-content>

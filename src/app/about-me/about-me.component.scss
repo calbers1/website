@@ -51,3 +51,20 @@ border-radius: 50%;
     width: 100%;
     justify-content: center;
 }
+
+
+@media only screen and (max-width: 900px) {
+  .about-header {
+      font-size: 1.75rem;
+  }
+
+
+  .about {
+    max-width: 90%;
+    font-size: .85rem;
+    p{
+        margin-bottom: 3em;
+    }
+  }
+
+}

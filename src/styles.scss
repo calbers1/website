@@ -9,6 +9,9 @@
 // Be sure that you only ever include this mixin once!
 @include mat-core();
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400;500;700&display=swap');
+
+
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
@@ -38,7 +41,10 @@ $website-theme-dark: mat-dark-theme($website-primary-dark, $website-accent-dark,
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  margin: 0;
+  font-family: 'Roboto Mono', monospace;
+}
 .anchor {
   position: relative;
   top: -4rem;
@@ -58,4 +64,18 @@ height: 2px;
 
 mat-sidenav-container, mat-toolbar{
   transition: 0.5s;
+  font-family: 'Roboto Mono',
+  monospace !important;
+  font-size: 1.5em;
+}
+
+.mat-typography h2 {
+  font-family: 'Roboto Mono',
+  monospace !important;
+  font-size: 1.25em;
+}
+
+*{
+  font-family: 'Roboto Mono',
+  monospace;
 }
